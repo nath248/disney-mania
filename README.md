@@ -72,10 +72,10 @@ You are **responsible** for scheduling time with your squad to seek approval for
 |---|---| ---|
 |November 5-7| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
 |November 8| Project Approval | Incomplete
-|November 9| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|November 10| Pseudocode / actual code | Incomplete
-|November 11| Initial Clickable Model  | Incomplete
-|November 12| MVP | Incomplete
+|November 9| Core Application Structure (HTML & CSS) | Incomplete
+|November 10| JS functions & event listeners | Incomplete
+|November 11| Add element to DOM for API data & mobile media queries | Incomplete
+|November 12-14| Flexbox & Final touches | Incomplete
 |November 15| Presentations | Incomplete
 
 ## Priority Matrix
