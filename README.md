@@ -81,7 +81,7 @@ The **Disney Mania App** is a place where you can search for different Disney mo
 
 ![alt text][prioritymatrix]
 
-[prioritymatrix]: https://i.ibb.co/qMS75hC/Priority-Matrix.png "Priority Matrix"
+[prioritymatrix]: https://i.ibb.co/VSv7wwr/Priority-Matrix.png "Priority Matrix"
 
 ## Timeframes
 
