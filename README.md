@@ -1,7 +1,7 @@
 # Project Overview
 ![alt text][header]
 
-[header]: https://i.ibb.co/Ky5rV8G/header-copy-2.png "API Snippet"
+[header]: https://i.ibb.co/Ky5rV8G/header-copy-2.png "Header"
 
 ## Project Name
 
