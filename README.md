@@ -64,10 +64,6 @@ The **Disney Mania App** is a place where you can search for different Disney mo
 
 ## Project Schedule
 
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
-
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
-
 |  Day | Deliverable | Status
 |---|---| ---|
 |November 5-7| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
