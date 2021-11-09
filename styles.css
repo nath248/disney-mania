@@ -22,7 +22,9 @@ margin: 0 auto;
 section {
   margin-bottom: 20px;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
 }
 
 #short-description{
@@ -40,7 +42,7 @@ h3{
 }
 
 .no-input{
-  padding-top: 21px;
+  padding-top: 27px;
   margin-right: 65px;
 }
 
@@ -61,6 +63,7 @@ button {
 input{
   width: 200px;
   text-align: center;
+  padding: 4px;
 }
 
 footer{
