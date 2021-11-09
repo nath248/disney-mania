@@ -13,8 +13,11 @@ async function fetchMovies() {
   const BASE_URL = `${DOMAIN}/v1/list-titles/?apiKey=${API_KEY}&source_ids=${SOURCE_ID}&types=${TYPE}`;
   try {
     let res = await axios.get(BASE_URL);
-    const disneyMovies = res.data.titles;
-    // console.log(disneyMovies);
+    const titles = res.data.titles;
+    const values = titles[Math.floor(Math.random() * titles.length)];
+    const movieId = values.imdb_id;
+    console.log(movieId);
+    //return movieId;
   } catch (error) {
     console.log("ERROR!")
   } finally {
@@ -22,7 +25,7 @@ async function fetchMovies() {
   }
 }
 
-// fetchMovies();
+fetchMovies();
 
 async function fetchShows() {
   const TYPE = TYPES[1];
@@ -34,7 +37,6 @@ async function fetchShows() {
     const showId = values.imdb_id;
     console.log(showId);
     //return showId;
-
   } catch (error) {
     console.log("ERROR!")
   } finally {
@@ -45,7 +47,7 @@ async function fetchShows() {
 fetchShows();
 
 async function fetchDetails() {
-  //const imdbId;
+  const imdbId = `tt0115433`;
   const BASE_URL1 = `${DOMAIN1}/3/find/${imdbId}?api_key=${API_KEY1}&language=en-US&external_source=imdb_id`;
   try {
     let res = await axios.get(BASE_URL1);
@@ -66,5 +68,5 @@ async function fetchDetails() {
   }
 }
 
-//fetchDetails();
+fetchDetails();
 
