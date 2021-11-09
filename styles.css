@@ -31,7 +31,7 @@ section {
 
 h3{
   margin: 0 auto;
-  width: 65%;
+  width: 60%;
   margin-bottom: 10px;
 }
 
@@ -41,6 +41,7 @@ h3{
 
 .no-input{
   padding-top: 21px;
+  margin-right: 65px;
 }
 
 .apiDiv {
@@ -52,6 +53,14 @@ h3{
 
 button {
   margin: 5px;
+  width: 140px;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+input{
+  width: 200px;
+  text-align: center;
 }
 
 footer{
