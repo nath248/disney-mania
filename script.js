@@ -8,6 +8,33 @@ const TYPES = [`movie`, `tv_series`];
 const DOMAIN1 = `https://api.themoviedb.org`;
 const API_KEY1 = `bdb572feced0e53967b61a4a2056d474`;
 
+//Buttons & Forms
+
+const movieBtn = document.querySelector("#random-movie-btn");
+const showBtn = document.querySelector("#random-show-btn");
+const searchForm = document.querySelector("#search-input");
+const searchInput = document.querySelector("#search");
+
+async function fetchTitles(title) {
+  const BASE_URL = `${DOMAIN}/v1/list-titles/?apiKey=${API_KEY}&source_ids=${SOURCE_ID}`;
+  try {
+    let res = await axios.get(BASE_URL);
+    const titles = res.data.titles;
+    let title = searchInput.value;
+
+    const values = titles[0];
+    const movieId = values.imdb_id;
+    console.log(movieId);
+    //return movieId;
+  } catch (error) {
+    console.log("ERROR!")
+  } finally {
+    console.log("DONE!")
+  }
+}
+
+//fetchTitles();
+
 async function fetchMovies() {
   const TYPE = TYPES[0];
   const BASE_URL = `${DOMAIN}/v1/list-titles/?apiKey=${API_KEY}&source_ids=${SOURCE_ID}&types=${TYPE}`;
@@ -25,7 +52,7 @@ async function fetchMovies() {
   }
 }
 
-fetchMovies();
+//fetchMovies();
 
 async function fetchShows() {
   const TYPE = TYPES[1];
@@ -35,8 +62,8 @@ async function fetchShows() {
     const titles = res.data.titles;
     const values = titles[Math.floor(Math.random() * titles.length)];
     const showId = values.imdb_id;
-    console.log(showId);
-    //return showId;
+    // console.log(showId);
+    return showId;
   } catch (error) {
     console.log("ERROR!")
   } finally {
@@ -44,7 +71,8 @@ async function fetchShows() {
   }
 }
 
-fetchShows();
+// let id = fetchShows();
+// console.log(id);
 
 async function fetchDetails() {
   const imdbId = `tt0115433`;
@@ -68,5 +96,13 @@ async function fetchDetails() {
   }
 }
 
-fetchDetails();
+//fetchDetails();
 
+// movieBtn.addEventListener("click", fetchMovies);
+// showBtn.addEventListener("click", fetchShows);
+searchForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let title = searchInput.value;
+  fetchTitles(title);
+  searchInput.value = "";
+});
