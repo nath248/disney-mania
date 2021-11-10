@@ -63,7 +63,7 @@ async function fetchShows() {
     const values = titles[Math.floor(Math.random() * titles.length)];
     const showId = values.imdb_id;
     // console.log(showId);
-    return showId;
+    fetchDetails(showId);
   } catch (error) {
     console.log("ERROR!")
   } finally {
@@ -71,15 +71,15 @@ async function fetchShows() {
   }
 }
 
-// let id = fetchShows();
-// console.log(id);
+fetchShows();
 
-async function fetchDetails() {
-  const imdbId = `tt0115433`;
+async function fetchDetails(id) {
+  const imdbId = id;
   const BASE_URL1 = `${DOMAIN1}/3/find/${imdbId}?api_key=${API_KEY1}&language=en-US&external_source=imdb_id`;
   try {
     let res = await axios.get(BASE_URL1);
     const disneyDetails = res.data;
+    console.log(disneyDetails);
     let title = disneyDetails.movie_results[0].title;
     let poster = disneyDetails.movie_results[0].poster_path;
     let popularity = disneyDetails.movie_results[0].popularity;
@@ -90,7 +90,7 @@ async function fetchDetails() {
     console.log(popularity);
     console.log(overview);
   } catch (error) {
-    console.log("ERROR!")
+    console.log(error)
   } finally {
     console.log("DONE!")
   }
@@ -100,9 +100,9 @@ async function fetchDetails() {
 
 // movieBtn.addEventListener("click", fetchMovies);
 // showBtn.addEventListener("click", fetchShows);
-searchForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-  let title = searchInput.value;
-  fetchTitles(title);
-  searchInput.value = "";
-});
+// searchForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   let title = searchInput.value;
+//   fetchTitles(title);
+//   searchInput.value = "";
+// });
