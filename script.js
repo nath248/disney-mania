@@ -20,20 +20,22 @@ async function fetchTitles(title) {
   try {
     let res = await axios.get(BASE_URL);
     const titles = res.data.titles;
+    // console.log(titles);
     let title = searchInput.value;
-
-    const values = titles[0];
-    const movieId = values.imdb_id;
-    console.log(movieId);
-    //return movieId;
+    titles.forEach((titles) => {
+      const titleValue = titles.title;
+      if (titleValue == title) {
+        // console.log(titleValue);
+        let searchId = titles.imdb_id;
+        fetchDetails(searchId);
+      }
+    });
   } catch (error) {
     console.log("ERROR!")
   } finally {
     console.log("DONE!")
   }
 }
-
-//fetchTitles();
 
 async function fetchMovies() {
   const TYPE = TYPES[0];
@@ -44,15 +46,13 @@ async function fetchMovies() {
     const values = titles[Math.floor(Math.random() * titles.length)];
     const movieId = values.imdb_id;
     console.log(movieId);
-    //return movieId;
+    fetchDetails(movieId);
   } catch (error) {
     console.log("ERROR!")
   } finally {
     console.log("DONE!")
   }
 }
-
-//fetchMovies();
 
 async function fetchShows() {
   const TYPE = TYPES[1];
@@ -71,24 +71,33 @@ async function fetchShows() {
   }
 }
 
-fetchShows();
-
 async function fetchDetails(id) {
   const imdbId = id;
   const BASE_URL1 = `${DOMAIN1}/3/find/${imdbId}?api_key=${API_KEY1}&language=en-US&external_source=imdb_id`;
   try {
     let res = await axios.get(BASE_URL1);
     const disneyDetails = res.data;
-    console.log(disneyDetails);
-    let title = disneyDetails.movie_results[0].title;
-    let poster = disneyDetails.movie_results[0].poster_path;
-    let popularity = disneyDetails.movie_results[0].popularity;
-    let overview = disneyDetails.movie_results[0].overview;
-    console.log(disneyDetails);
-    console.log(title);
-    console.log(poster);
-    console.log(popularity);
-    console.log(overview);
+    if (TYPES === "movie") {
+      //Movie Details
+      let movieTitle = disneyDetails.movie_results[0].title;
+      let moviePoster = disneyDetails.movie_results[0].poster_path;
+      let moviePop = disneyDetails.movie_results[0].popularity;
+      let movieOverview = disneyDetails.movie_results[0].overview;
+      console.log(movieTitle);
+      console.log(moviePoster);
+      console.log(moviePop);
+      console.log(movieOverview);
+    } else if (TYPES === "tv_series") {
+      //Show Details
+      let showTitle = disneyDetails.tv_results[0].title;
+      let showPoster = disneyDetails.tv_results[0].poster_path;
+      let showPop = disneyDetails.tv_results[0].popularity;
+      let showOverview = disneyDetails.tv_results[0].overview;
+      console.log(showTitle);
+      console.log(showPoster);
+      console.log(showPop);
+      console.log(showOverview);
+    }
   } catch (error) {
     console.log(error)
   } finally {
@@ -96,13 +105,11 @@ async function fetchDetails(id) {
   }
 }
 
-//fetchDetails();
-
 // movieBtn.addEventListener("click", fetchMovies);
 // showBtn.addEventListener("click", fetchShows);
-// searchForm.addEventListener("submit", (e) => {
-//   e.preventDefault();
-//   let title = searchInput.value;
-//   fetchTitles(title);
-//   searchInput.value = "";
-// });
+searchForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let title = searchInput.value;
+  fetchTitles(title);
+  // searchInput.value = "";
+});
