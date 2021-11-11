@@ -53,6 +53,19 @@ h3{
   border-radius: 4px;
 }
 
+.innerDiv {
+  width: 290px;
+  height: 280px;
+  padding: 0 -5px;
+  overflow: scroll;
+}
+
+.title{
+  background-color: black;
+  color: white;
+  margin: 10px;
+}
+
 button {
   margin: 5px;
   width: 140px;
