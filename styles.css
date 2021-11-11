@@ -34,11 +34,10 @@ section {
 h3{
   margin: 0 auto;
   width: 60%;
-  margin-bottom: 10px;
 }
 
 .indDiv{
-  margin: 0 10px;
+  margin: 5px 0 10px 0;
 }
 
 .no-input{
@@ -47,15 +46,15 @@ h3{
 }
 
 .apiDiv {
-  width: 290px;
-  height: 280px;
+  width: 350px;
+  height: 450px;
   background-color: red;
   border-radius: 4px;
 }
 
 .innerDiv {
-  width: 290px;
-  height: 280px;
+  width: 350px;
+  height: 450px;
   padding: 0 -5px;
   overflow: scroll;
 }
@@ -72,7 +71,8 @@ h3{
 .title{
   background-color: black;
   color: white;
-  margin: 10px;
+  margin: 10px 30px;
+  font-size: 24px;
 }
 
 button {
@@ -93,4 +93,37 @@ footer{
   height: 200px;
   background-image: url(./imgs/footer-img2.png);
   background-size: cover;
+}
+
+@media only screen and (max-width: 1220px) {
+  .no-input{
+    margin-right: 0;
+  }
+  .no-input:first-child{
+    margin-right: 45px;
+  }
+}
+@media only screen and (max-width: 770px) {
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+  .no-input{
+    margin-right: 0;
+  }
+  .no-input:first-child{
+    margin-right: 0;
+  }
+  .apiDiv {
+    width: 250px;
+    height: 300px;
+  }
+  
+  .innerDiv {
+    width: 250px;
+    height: 300px;
+  }
+  h3{
+   font-size: 16px;
+  }
 }
