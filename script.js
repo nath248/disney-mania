@@ -7,6 +7,7 @@ const TYPES = [`movie`, `tv_series`];
 // TMDB 
 const DOMAIN1 = `https://api.themoviedb.org`;
 const API_KEY1 = `bdb572feced0e53967b61a4a2056d474`;
+const imgBaseUrl = `https://image.tmdb.org/t/p/w200`;
 
 //Buttons & Forms
 
@@ -101,7 +102,7 @@ async function fetchMovieDetails(id) {
     innerMovieDiv.append(movieTitle);
 
     let moviePoster = document.createElement("img");
-    moviePoster.src = `${DOMAIN1}${disneyDetails.movie_results[0].poster_path}`;
+    moviePoster.src = `${imgBaseUrl}${disneyDetails.movie_results[0].poster_path}`;
     innerMovieDiv.append(moviePoster);
 
     let overviewDiv = document.createElement("div");
@@ -144,7 +145,7 @@ async function fetchShowDetails(id) {
     innerShowDiv.appendChild(showTitle);
 
     let showPoster = document.createElement("img");
-    showTitle.src = `${DOMAIN1}${disneyDetails.tv_results[0].poster_path}`;
+    showPoster.src = `${imgBaseUrl}${disneyDetails.tv_results[0].poster_path}`;
     innerShowDiv.appendChild(showPoster);
 
     let overviewDiv = document.createElement("div");
@@ -187,7 +188,7 @@ async function fetchTitleDetails(id) {
       innerTitleDiv.append(movieTitle);
 
       let moviePoster = document.createElement("img");
-      moviePoster.src = `${DOMAIN1}${disneyDetails.movie_results[0].poster_path}`;
+      moviePoster.src = `${imgBaseUrl}${disneyDetails.movie_results[0].poster_path}`;
       innerTitleDiv.append(moviePoster);
 
       let overviewDiv = document.createElement("div");
@@ -212,7 +213,7 @@ async function fetchTitleDetails(id) {
       innerTitleDiv.appendChild(showTitle);
 
       let showPoster = document.createElement("img");
-      showTitle.src = `${DOMAIN1}${disneyDetails.tv_results[0].poster_path}`;
+      showPoster.src = `${imgBaseUrl}${disneyDetails.tv_results[0].poster_path}`;
       innerTitleDiv.appendChild(showPoster);
 
       let overviewDiv = document.createElement("div");
