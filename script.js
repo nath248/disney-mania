@@ -104,17 +104,21 @@ async function fetchMovieDetails(id) {
     moviePoster.src = `${DOMAIN1}${disneyDetails.movie_results[0].poster_path}`;
     innerMovieDiv.append(moviePoster);
 
+    let overviewDiv = document.createElement("div");
+    overviewDiv.classList.add("overviewDiv");
+    innerMovieDiv.append(overviewDiv);
+
     let movieRelease = document.createElement("p");
     movieRelease.innerText = `Release Date: ${disneyDetails.movie_results[0].release_date}`;
-    innerMovieDiv.append(movieRelease);
+    overviewDiv.append(movieRelease);
 
     let moviePop = document.createElement("p");
     moviePop.innerText = `Popularity: ${disneyDetails.movie_results[0].popularity}%`;
-    innerMovieDiv.append(moviePop);
+    overviewDiv.append(moviePop);
 
     let movieOverview = document.createElement("p");
     movieOverview.innerText = disneyDetails.movie_results[0].overview;
-    innerMovieDiv.append(movieOverview);
+    overviewDiv.append(movieOverview);
   } catch (error) {
     console.log(error)
   } finally {
@@ -143,17 +147,21 @@ async function fetchShowDetails(id) {
     showTitle.src = `${DOMAIN1}${disneyDetails.tv_results[0].poster_path}`;
     innerShowDiv.appendChild(showPoster);
 
+    let overviewDiv = document.createElement("div");
+    overviewDiv.classList.add("overviewDiv");
+    innerShowDiv.append(overviewDiv);
+
     let showRelease = document.createElement("p");
     showRelease.innerText = `Air Date: ${disneyDetails.tv_results[0].first_air_date}`;
-    innerShowDiv.appendChild(showRelease);
+    overviewDiv.appendChild(showRelease);
 
     let showPop = document.createElement("p");
     showPop.innerText = `Popularity: ${disneyDetails.tv_results[0].popularity}`;
-    innerShowDiv.appendChild(showPop);
+    overviewDiv.appendChild(showPop);
 
     let showOverview = document.createElement("p");
     showOverview.innerText = disneyDetails.tv_results[0].overview;
-    innerShowDiv.appendChild(showOverview);
+    overviewDiv.appendChild(showOverview);
   } catch (error) {
     console.log(error)
   } finally {
@@ -171,6 +179,7 @@ async function fetchTitleDetails(id) {
     let innerTitleDiv = document.createElement("div");
     innerTitleDiv.classList.add("innerDiv");
     titleDiv.append(innerTitleDiv);
+
     if (disneyDetails.movie_results.length === 1) {
       let movieTitle = document.createElement("h2");
       movieTitle.classList.add("title");
@@ -181,17 +190,21 @@ async function fetchTitleDetails(id) {
       moviePoster.src = `${DOMAIN1}${disneyDetails.movie_results[0].poster_path}`;
       innerTitleDiv.append(moviePoster);
 
+      let overviewDiv = document.createElement("div");
+      overviewDiv.classList.add("overviewDiv");
+      innerTitleDiv.append(overviewDiv);
+
       let movieRelease = document.createElement("p");
       movieRelease.innerText = `Release Date: ${disneyDetails.movie_results[0].release_date}`;
-      innerTitleDiv.append(movieRelease);
+      overviewDiv.append(movieRelease);
 
       let moviePop = document.createElement("p");
       moviePop.innerText = `Popularity: ${disneyDetails.movie_results[0].popularity}`;
-      innerTitleDiv.append(moviePop);
+      overviewDiv.append(moviePop);
 
       let movieOverview = document.createElement("p");
       movieOverview.innerText = disneyDetails.movie_results[0].overview;
-      innerTitleDiv.append(movieOverview);
+      overviewDiv.append(movieOverview);
     } else if (disneyDetails.tv_results.length === 1) {
       let showTitle = document.createElement("h2");
       showTitle.classList.add("title");
@@ -202,17 +215,21 @@ async function fetchTitleDetails(id) {
       showTitle.src = `${DOMAIN1}${disneyDetails.tv_results[0].poster_path}`;
       innerTitleDiv.appendChild(showPoster);
 
+      let overviewDiv = document.createElement("div");
+      overviewDiv.classList.add("overviewDiv");
+      innerTitleDiv.append(overviewDiv);
+
       let showRelease = document.createElement("p");
       showRelease.innerText = `Air Date: ${disneyDetails.tv_results[0].first_air_date}`;
-      innerTitleDiv.appendChild(showRelease);
+      overviewDiv.appendChild(showRelease);
 
       let showPop = document.createElement("p");
       showPop.innerText = `Popularity: ${disneyDetails.tv_results[0].popularity}`;
-      innerTitleDiv.appendChild(showPop);
+      overviewDiv.appendChild(showPop);
 
       let showOverview = document.createElement("p");
       showOverview.innerText = disneyDetails.tv_results[0].overview;
-      innerTitleDiv.appendChild(showOverview);
+      overviewDiv.appendChild(showOverview);
     }
   } catch (error) {
     console.log(error)
