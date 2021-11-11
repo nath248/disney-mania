@@ -41,6 +41,7 @@ async function fetchTitles() {
         let searchId = titles.imdb_id;
         console.log(searchId);
         fetchTitleDetails(searchId);
+        searchInput.value = "";
       }
     });
   } catch (error) {
@@ -250,9 +251,7 @@ showBtn.addEventListener("click", () => {
 searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
   removeDivContents();
-  //searchInput.value = "";
   fetchTitles();
-
 });
 
 function removeDivContents() {
