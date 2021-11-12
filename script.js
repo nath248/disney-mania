@@ -35,6 +35,12 @@ async function fetchTitles() {
         fetchTitleDetails(searchId);
         searchInput.value = "";
       }
+      //else if (titleValue.toLowerCase() == title) {
+      //   let searchId = titles.imdb_id;
+      //   console.log(searchId);
+      //   fetchTitleDetails(searchId);
+      //   searchInput.value = "";
+      // }
     });
   } catch (error) {
     console.log("ERROR!")

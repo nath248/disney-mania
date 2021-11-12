@@ -97,6 +97,9 @@ footer{
 
 @media only screen and (max-width: 1200px) {
   .no-input{
+    margin-right: 0;
+  }
+  .no-input:first-child{
     margin-right: 25px;
   }
 }
