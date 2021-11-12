@@ -36,6 +36,21 @@ h3{
   width: 60%;
 }
 
+ul {
+  margin: 0 auto;
+  margin-top: 5px;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  width: 100%;
+}
+
+a {
+  color: white;
+}
+
 .indDiv{
   margin: 5px 0 10px 0;
 }
@@ -126,4 +141,28 @@ footer{
   h3{
    font-size: 16px;
   }
+}
+
+/* Favorites
+https://medium.com/the-web-tub/tutorial-lets-make-a-favorite-star-button-in-javascript-using-the-web-components-api-e0899cbfa4fd */
+.favorite-star-character{
+  color: #ccd6dd;
+  cursor: pointer;
+  display: inline-block;
+
+  transform: scale3d(1.0, 1.0, 1.0);
+  -webkit-transform: scale3d(1.0, 1.0, 1.0);
+  -moz-transform: scale3d(1.0, 1.0, 1.0);
+}
+
+.favorite-star-character:active {
+  color: #ffac33;
+
+  -webkit-animation: favorite-star-bounce 0.3s ease-in-out;
+  -moz-animation: favorite-star-bounce 0.3s ease-in-out;
+  animation: favorite-star-bounce 0.3s ease-in-out;
+}
+
+.favorite-star-character:hover {
+  color: #ffac33;
 }

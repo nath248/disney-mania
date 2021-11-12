@@ -66,11 +66,11 @@ The **Disney Mania App** is a place where you can search for different Disney mo
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|November 5-7| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|November 8| Project Approval | Incomplete
-|November 9| Core Application Structure (HTML & CSS) | Incomplete
-|November 10| JS functions & event listeners | Incomplete
-|November 11| Add element to DOM for API data & mobile media queries | Incomplete
+|November 5-7| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
+|November 8| Project Approval | Complete
+|November 9| Core Application Structure (HTML & CSS) | Complete
+|November 10| JS functions & event listeners | Complete
+|November 11| Add element to DOM for API data & mobile media queries | Complete
 |November 12-14| Flexbox & Final touches | Incomplete
 |November 15| Presentations | Incomplete
 
@@ -87,21 +87,20 @@ The **Disney Mania App** is a place where you can search for different Disney mo
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Build core structure with HTML | H | 3hrs| 3hrs | hrs |
-| Build design of application with CSS | H | 4hrs| 4hrs | hrs |
-| Create Buttons and add event listeners | H | 3hrs| 3hrs | hrs |
-| Build function to return API data for both API's | H | 3.5hrs| 3.5hrs | hrs |
-| Build input field and attach to API | H | 2hrs| 2hrs | hrs |
-| Build function to randomize API data | H | 3.5hrs| 3.5hrs | hrs |
-| Access HTML elements in JS and append div's to sections for data input | H | 3hrs| 3hrs | hrs |
-| Build mobile application with media queries | H | 3.5hrs| 3.5hrs | hrs |
-| Set up flexbox properties | H | 3hrs| 3hrs | hrs |
-| Final touches, testing and debugging application | H | 4hrs| 4hrs | hrs |
-| Total | H | 32.5hrs| 32.5hrs | hrs |
+| Build core structure with HTML | H | 3hrs| hrs | hrs |
+| Build design of application with CSS | H | 4hrs| hrs | hrs |
+| Create Buttons and add event listeners | H | 3hrs| hrs | hrs |
+| Build function to return API data for both API's | H | 3.5hrs| hrs | hrs |
+| Build input field and attach to API | H | 2hrs| hrs | hrs |
+| Build function to randomize API data | H | 3.5hrs| hrs | hrs |
+| Access HTML elements in JS and append div's to sections for data input | H | 3hrs| hrs | hrs |
+| Build mobile application with media queries | H | 3.5hrs| hrs | hrs |
+| Set up flexbox properties | H | 3hrs| hrs | hrs |
+| Final touches, testing and debugging application | H | 4hrs| hrs | hrs |
+| Total | H | 32.5hrs| hrs | hrs |
 
 ## Code Snippet
 
 
 
 ## Change Log
- 

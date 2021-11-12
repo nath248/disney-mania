@@ -297,3 +297,22 @@ function removeDivContents() {
   showDiv.innerHTML = "";
   titleDiv.innerHTML = "";
 }
+
+// Favorites
+// https://medium.com/the-web-tub/tutorial-lets-make-a-favorite-star-button-in-javascript-using-the-web-components-api-e0899cbfa4fd 
+
+const star1 = document.querySelector("#star1");
+const star2 = document.querySelector("#star2");
+const star3 = document.querySelector("#star3");
+
+star1.addEventListener("click", () => {
+  star1.style.color = "#ffac33";
+})
+
+star2.addEventListener("click", () => {
+  star2.style.color = "#ffac33";
+})
+
+star3.addEventListener("click", () => {
+  star3.style.color = "#ffac33";
+})
