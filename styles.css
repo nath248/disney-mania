@@ -95,12 +95,9 @@ footer{
   background-size: cover;
 }
 
-@media only screen and (max-width: 1220px) {
+@media only screen and (max-width: 1200px) {
   .no-input{
-    margin-right: 0;
-  }
-  .no-input:first-child{
-    margin-right: 45px;
+    margin-right: 25px;
   }
 }
 @media only screen and (max-width: 770px) {

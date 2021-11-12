@@ -21,25 +21,17 @@ const titleDiv = document.querySelector("#title");
 
 async function fetchTitles() {
   const TYPE = `movie,tv_series`;
-  const BASE_URL = `${DOMAIN}/v1/list-titles/?apiKey=${API_KEY}&source_ids=${SOURCE_ID}&types=${TYPE}&page=1`;
-  // const BASE_URL1 = `${DOMAIN}/v1/list-titles/?apiKey=${API_KEY}&source_ids=${SOURCE_ID}&types=${TYPE}&page=2`;
-  // const BASE_URL2 = `${DOMAIN}/v1/list-titles/?apiKey=${API_KEY}&source_ids=${SOURCE_ID}&types=${TYPE}&page=3`;
+  const BASE_URL = `${DOMAIN}/v1/list-titles/?apiKey=${API_KEY}&source_ids=${SOURCE_ID}&types=${TYPE}&page=1&page=2&page=3`;
   try {
     let res = await axios.get(BASE_URL);
     const titles = res.data.titles;
-    // const titles1 = res[1].data.titles;
-    // const titles2 = res[2].data.titles;
     // console.log(titles);
-    // console.log(titles1);
-    // console.log(titles2);
     let title = searchInput.value;
     titles.forEach((titles) => {
       const titleValue = titles.title;
-      // const titleValue1 = titles1.title;
-      // const titleValue2 = titles2.title;
       if (titleValue == title) {
         let searchId = titles.imdb_id;
-        console.log(searchId);
+        //console.log(searchId);
         fetchTitleDetails(searchId);
         searchInput.value = "";
       }
