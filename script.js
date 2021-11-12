@@ -21,27 +21,67 @@ const titleDiv = document.querySelector("#title");
 
 async function fetchTitles() {
   const TYPE = `movie,tv_series`;
-  const BASE_URL = `${DOMAIN}/v1/list-titles/?apiKey=${API_KEY}&source_ids=${SOURCE_ID}&types=${TYPE}&page=1&page=2&page=3`;
+  const BASE_URL = `${DOMAIN}/v1/list-titles/?apiKey=${API_KEY}&source_ids=${SOURCE_ID}&types=${TYPE}&page=1`;
+  const BASE_URL1 = `${DOMAIN}/v1/list-titles/?apiKey=${API_KEY}&source_ids=${SOURCE_ID}&types=${TYPE}&page=2`;
+  const BASE_URL2 = `${DOMAIN}/v1/list-titles/?apiKey=${API_KEY}&source_ids=${SOURCE_ID}&types=${TYPE}&page=3`;
   try {
     let res = await axios.get(BASE_URL);
-    const titles = res.data.titles;
-    // console.log(titles);
-    let title = searchInput.value;
-    titles.forEach((titles) => {
-      const titleValue = titles.title;
-      if (titleValue == title) {
-        let searchId = titles.imdb_id;
-        //console.log(searchId);
-        fetchTitleDetails(searchId);
-        searchInput.value = "";
-      }
-      //else if (titleValue.toLowerCase() == title) {
-      //   let searchId = titles.imdb_id;
-      //   console.log(searchId);
-      //   fetchTitleDetails(searchId);
-      //   searchInput.value = "";
-      // }
-    });
+    let res1 = await axios.get(BASE_URL1);
+    let res2 = await axios.get(BASE_URL2);
+
+    axios.all([res, res1, res2]).then(axios.spread((...response) => {
+      const titles = response[0].data.titles;
+      const titles1 = response[1].data.titles;
+      const titles2 = response[2].data.titles;
+      let title = searchInput.value;
+      titles.forEach((titles) => {
+        const titleValue = titles.title;
+        const titleCase = titleValue.toLowerCase();
+        if (titleValue == title) {
+          let searchId = titles.imdb_id;
+          //console.log(searchId);
+          fetchTitleDetails(searchId);
+          searchInput.value = "";
+        } else if (titleCase == title) {
+          let searchId = titles.imdb_id;
+          //console.log(searchId);
+          fetchTitleDetails(searchId);
+          searchInput.value = "";
+        }
+      });
+      titles1.forEach((titles) => {
+        const titleValue = titles.title;
+        const titleCase = titleValue.toLowerCase();
+        if (titleValue == title) {
+          let searchId = titles.imdb_id;
+          //console.log(searchId);
+          fetchTitleDetails(searchId);
+          searchInput.value = "";
+        } else if (titleCase == title) {
+          let searchId = titles.imdb_id;
+          //console.log(searchId);
+          fetchTitleDetails(searchId);
+          searchInput.value = "";
+        }
+      });
+      titles2.forEach((titles) => {
+        const titleValue = titles.title;
+        const titleCase = titleValue.toLowerCase();
+        if (titleValue == title) {
+          let searchId = titles.imdb_id;
+          //console.log(searchId);
+          fetchTitleDetails(searchId);
+          searchInput.value = "";
+        } else if (titleCase == title) {
+          let searchId = titles.imdb_id;
+          //console.log(searchId);
+          fetchTitleDetails(searchId);
+          searchInput.value = "";
+        }
+      });
+    }));
+    //https://www.storyblok.com/tp/how-to-send-multiple-requests-using-axios -(Link used to figure out how to call multiple api links at the same time)
+
   } catch (error) {
     console.log("ERROR!")
   } finally {
