@@ -121,10 +121,13 @@ footer{
   }
 }
 
-@media only screen and (max-width: 545px) {
+@media only screen and (max-width: 725px) {
   section {
     display: flex;
     flex-direction: column;
+  }
+  .no-input:first-child {
+    margin-right: 0;
   }
   .apiDiv {
     width: 250px;
@@ -166,3 +169,6 @@ https://medium.com/the-web-tub/tutorial-lets-make-a-favorite-star-button-in-java
 .favorite-star-character:hover {
   color: #ffac33;
 }
+
+/* Fireworks -  */
+

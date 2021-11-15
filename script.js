@@ -308,6 +308,13 @@ const star3 = document.querySelector("#star3");
 star1.addEventListener("click", () => {
   star1.style.color = "#ffac33";
   let content = document.querySelector(".innerDiv");
+
+  // let extern = document.querySelector('link[rel="import"][href="../fav-and-watched/index.html"]').import;
+  // console.log(extern);
+
+  // let movieDetails = extern.querySelector("#movie");
+  // console.log(movieDetails);
+
   // let movieDiv = document.querySelector("link[rel=import][href='../fav-and-watched/index.html']")
   //   .import.querySelector("#favorite-movies");
   // let link = document.createElement("link");
@@ -333,3 +340,5 @@ star3.addEventListener("click", () => {
   let content = document.querySelector(".innerDiv");
   console.log(content);
 })
+
+// Fireworks 
