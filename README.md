@@ -5,11 +5,7 @@
 
 ## Project Name
 
-### Disney Mania!
-
-![alt text][titlelink]
-
-[titlelink]: https://nath248.github.io/disney-mania/ "Title Link"
+## [Disney Mania!](https://nath248.github.io/disney-mania/ "Disney Mania!")
 
 ## Project Description
 
