@@ -16,18 +16,18 @@ The **Disney Mania App** is a place where you can search for different Disney mo
 
 [Watch Mode - By Source & Type](https://api.watchmode.com/v1/list-titles/?apiKey={api-key}&source_ids={source_id}&types={types})
 
-![alt text][codesnippet]
+![alt text][apisnippet]
 
-[codesnippet]: https://i.ibb.co/XVhntSC/Screen-Shot-2021-11-07-at-4-58-50-PM.png "API Snippet"
+[apisnippet]: https://i.ibb.co/XVhntSC/Screen-Shot-2021-11-07-at-4-58-50-PM.png "API Snippet"
 
 
 [The Movie DB API](https://developers.themoviedb.org/3/getting-started/introduction "The Movie DB API Homepage")
 
 [The Movie DB - By External ID](https://api.themoviedb.org/3/find/{external_id}?api_key=<<api_key>>&language=en-US&external_source=imdb_id)
 
-![alt text][codesnippet1]
+![alt text][apisnippet1]
 
-[codesnippet1]: https://i.ibb.co/qNrdhNK/Screen-Shot-2021-11-07-at-5-00-16-PM.png "API Snippet"
+[apisnippet1]: https://i.ibb.co/qNrdhNK/Screen-Shot-2021-11-07-at-5-00-16-PM.png "API Snippet"
 
 ## Wireframes
 [Disney Mania! - Wireframe](https://www.figma.com/file/Eg5pRsDWEB5biwwltQlKY1/Disney-Mania!?node-id=0%3A1 "Wireframe")
@@ -87,20 +87,28 @@ The **Disney Mania App** is a place where you can search for different Disney mo
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Build core structure with HTML | H | 3hrs| hrs | hrs |
-| Build design of application with CSS | H | 4hrs| hrs | hrs |
-| Create Buttons and add event listeners | H | 3hrs| hrs | hrs |
-| Build function to return API data for both API's | H | 3.5hrs| hrs | hrs |
-| Build input field and attach to API | H | 2hrs| hrs | hrs |
-| Build function to randomize API data | H | 3.5hrs| hrs | hrs |
-| Access HTML elements in JS and append div's to sections for data input | H | 3hrs| hrs | hrs |
-| Build mobile application with media queries | H | 3.5hrs| hrs | hrs |
-| Set up flexbox properties | H | 3hrs| hrs | hrs |
-| Final touches, testing and debugging application | H | 4hrs| hrs | hrs |
-| Total | H | 32.5hrs| hrs | hrs |
+| Build core structure with HTML | H | 3hrs| 1 hr | 1 hr |
+| Build design of application with CSS | H | 4hrs| 2hrs | 2hrs |
+| Create Buttons and add event listeners | H | 3hrs| 2hrs | 2hrs |
+| Build function to return API data for both API's | H | 3.5hrs| 8.5hrs | 8.5hrs |
+| Build input field and attach to API | H | 2hrs| 2hrs | 2hrs |
+| Build function to randomize API data | H | 3.5hrs| 1hr | 1hr |
+| Access HTML elements in JS and append div's to sections for data input | H | 3hrs| 3hrs | 3hrs |
+| Build mobile application with media queries | H | 3.5hrs| 2.5hrs | 2.5hrs |
+| Set up flexbox properties | H | 3hrs| 2hrs | 2hrs |
+| Final touches, testing and debugging application | H | 4hrs| 4hrs | 4hrs |
+| Attempting Post MVP - Favorites & Seperate Page | H | 4hrs| 4hrs | 4hrs |
+| Total | H | 32.5hrs| 32hrs | 32hrs |
 
 ## Code Snippet
 
+![alt text][codesnippet]
 
+[codesnippet]: https://i.ibb.co/LnT3JKg/code-snippet.png "Code Snippet"
+![alt text][codesnippet2]
+
+[codesnippet2]: https://i.ibb.co/zH8VZjm/codesnippet2.png "Code Snippet"
 
 ## Change Log
+- Added a scroll feature within the boxes for legibility
+- Made input case insensitive for easier usability

@@ -39,12 +39,10 @@ async function fetchTitles() {
         const titleCase = titleValue.toLowerCase();
         if (titleValue == title) {
           let searchId = titles.imdb_id;
-          //console.log(searchId);
           fetchTitleDetails(searchId);
           searchInput.value = "";
         } else if (titleCase == title) {
           let searchId = titles.imdb_id;
-          //console.log(searchId);
           fetchTitleDetails(searchId);
           searchInput.value = "";
         }
@@ -54,12 +52,10 @@ async function fetchTitles() {
         const titleCase = titleValue.toLowerCase();
         if (titleValue == title) {
           let searchId = titles.imdb_id;
-          //console.log(searchId);
           fetchTitleDetails(searchId);
           searchInput.value = "";
         } else if (titleCase == title) {
           let searchId = titles.imdb_id;
-          //console.log(searchId);
           fetchTitleDetails(searchId);
           searchInput.value = "";
         }
@@ -69,12 +65,10 @@ async function fetchTitles() {
         const titleCase = titleValue.toLowerCase();
         if (titleValue == title) {
           let searchId = titles.imdb_id;
-          //console.log(searchId);
           fetchTitleDetails(searchId);
           searchInput.value = "";
         } else if (titleCase == title) {
           let searchId = titles.imdb_id;
-          //console.log(searchId);
           fetchTitleDetails(searchId);
           searchInput.value = "";
         }
@@ -97,7 +91,6 @@ async function fetchMovies() {
     const titles = res.data.titles;
     const values = titles[Math.floor(Math.random() * titles.length)];
     const movieId = values.imdb_id;
-    //console.log(movieId);
     fetchMovieDetails(movieId);
   } catch (error) {
     console.log("ERROR!")
@@ -114,7 +107,6 @@ async function fetchShows() {
     const titles = res.data.titles;
     const values = titles[Math.floor(Math.random() * titles.length)];
     const showId = values.imdb_id;
-    // console.log(showId);
     fetchShowDetails(showId);
   } catch (error) {
     console.log("ERROR!")
@@ -129,7 +121,6 @@ async function fetchMovieDetails(id) {
   try {
     let res = await axios.get(BASE_URL1);
     const disneyDetails = res.data;
-    console.log(disneyDetails);
     //Movie Details
     let innerMovieDiv = document.createElement("div");
     innerMovieDiv.classList.add("innerDiv");
@@ -172,7 +163,6 @@ async function fetchShowDetails(id) {
   try {
     let res = await axios.get(BASE_URL1);
     const disneyDetails = res.data;
-    //console.log(disneyDetails);
     //Show Details
     let innerShowDiv = document.createElement("div");
     innerShowDiv.classList.add("innerDiv");
@@ -215,7 +205,6 @@ async function fetchTitleDetails(id) {
   try {
     let res = await axios.get(BASE_URL1);
     const disneyDetails = res.data;
-    //console.log(disneyDetails);
     let innerTitleDiv = document.createElement("div");
     innerTitleDiv.classList.add("innerDiv");
     titleDiv.append(innerTitleDiv);
@@ -301,44 +290,44 @@ function removeDivContents() {
 // Favorites
 // https://medium.com/the-web-tub/tutorial-lets-make-a-favorite-star-button-in-javascript-using-the-web-components-api-e0899cbfa4fd 
 
-const star1 = document.querySelector("#star1");
-const star2 = document.querySelector("#star2");
-const star3 = document.querySelector("#star3");
+// const star1 = document.querySelector("#star1");
+// const star2 = document.querySelector("#star2");
+// const star3 = document.querySelector("#star3");
 
-star1.addEventListener("click", () => {
-  star1.style.color = "#ffac33";
-  let content = document.querySelector(".innerDiv");
+// star1.addEventListener("click", () => {
+//   star1.style.color = "#ffac33";
+//   let content = document.querySelector(".innerDiv");
 
-  // let extern = document.querySelector('link[rel="import"][href="../fav-and-watched/index.html"]').import;
-  // console.log(extern);
+// let extern = document.querySelector('link[rel="import"][href="../fav-and-watched/index.html"]').import;
+// console.log(extern);
 
-  // let movieDetails = extern.querySelector("#movie");
-  // console.log(movieDetails);
+// let movieDetails = extern.querySelector("#movie");
+// console.log(movieDetails);
 
-  // let movieDiv = document.querySelector("link[rel=import][href='../fav-and-watched/index.html']")
-  //   .import.querySelector("#favorite-movies");
-  // let link = document.createElement("link");
-  // link.rel = "import";
-  // link.href = "../fav-and-watched/index.html";
-  // link.setAttribute("async", "");
-  // let contentPgTwo = link.import;
-  // let contentEl = contentPgTwo.querySelector("#favorite-movies");
-  console.log(content);
+// let movieDiv = document.querySelector("link[rel=import][href='../fav-and-watched/index.html']")
+//   .import.querySelector("#favorite-movies");
+// let link = document.createElement("link");
+// link.rel = "import";
+// link.href = "../fav-and-watched/index.html";
+// link.setAttribute("async", "");
+// let contentPgTwo = link.import;
+// let contentEl = contentPgTwo.querySelector("#favorite-movies");
+// console.log(content);
   // console.log(movieDiv);
   // console.log(pgDiv);
 
-})
+// })
 
-star2.addEventListener("click", () => {
-  star2.style.color = "#ffac33";
-  let content = document.querySelector(".innerDiv");
-  console.log(content);
-})
+// star2.addEventListener("click", () => {
+//   star2.style.color = "#ffac33";
+//   let content = document.querySelector(".innerDiv");
+//   console.log(content);
+// })
 
-star3.addEventListener("click", () => {
-  star3.style.color = "#ffac33";
-  let content = document.querySelector(".innerDiv");
-  console.log(content);
-})
+// star3.addEventListener("click", () => {
+//   star3.style.color = "#ffac33";
+//   let content = document.querySelector(".innerDiv");
+//   console.log(content);
+// })
 
 // Fireworks 
