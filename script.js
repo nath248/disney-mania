@@ -307,6 +307,11 @@ const star3 = document.querySelector("#star3");
 
 star1.addEventListener("click", () => {
   star1.style.color = "#ffac33";
+  let content = document.querySelector(".innerDiv");
+  let movieDiv = document.querySelector("#favorite-movie");
+  console.log(content);
+  console.log(movieDiv);
+
 })
 
 star2.addEventListener("click", () => {
