@@ -7,6 +7,10 @@
 
 ### Disney Mania!
 
+![alt text][titlelink]
+
+[titlelink]: https://nath248.github.io/disney-mania/ "Title Link"
+
 ## Project Description
 
 The **Disney Mania App** is a place where you can search for different Disney movies and tv shows. Perfect for building a bingeworthy weekend. You can get a random movie or tv show to watch as well as details about the shows such as the title, release year, popularity and overview.

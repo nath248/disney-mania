@@ -148,7 +148,7 @@ async function fetchMovieDetails(id) {
     overviewDiv.append(moviePop);
 
     let movieOverview = document.createElement("p");
-    movieOverview.innerText = disneyDetails.movie_results[0].overview;
+    movieOverview.innerText = `Overview: ${disneyDetails.movie_results[0].overview}`;
     overviewDiv.append(movieOverview);
   } catch (error) {
     console.log(error)
@@ -190,7 +190,7 @@ async function fetchShowDetails(id) {
     overviewDiv.appendChild(showPop);
 
     let showOverview = document.createElement("p");
-    showOverview.innerText = disneyDetails.tv_results[0].overview;
+    showOverview.innerText = `Overview: ${disneyDetails.tv_results[0].overview}`;
     overviewDiv.appendChild(showOverview);
   } catch (error) {
     console.log(error)
@@ -232,7 +232,7 @@ async function fetchTitleDetails(id) {
       overviewDiv.append(moviePop);
 
       let movieOverview = document.createElement("p");
-      movieOverview.innerText = disneyDetails.movie_results[0].overview;
+      movieOverview.innerText = `Overview: ${disneyDetails.movie_results[0].overview}`;
       overviewDiv.append(movieOverview);
     } else if (disneyDetails.tv_results.length === 1) {
       let showTitle = document.createElement("h2");
@@ -257,7 +257,7 @@ async function fetchTitleDetails(id) {
       overviewDiv.appendChild(showPop);
 
       let showOverview = document.createElement("p");
-      showOverview.innerText = disneyDetails.tv_results[0].overview;
+      showOverview.innerText = `Overview: ${disneyDetails.tv_results[0].overview}`;
       overviewDiv.appendChild(showOverview);
     }
   } catch (error) {
