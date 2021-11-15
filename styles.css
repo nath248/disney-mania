@@ -148,7 +148,7 @@ footer{
 
 /* Favorites
 https://medium.com/the-web-tub/tutorial-lets-make-a-favorite-star-button-in-javascript-using-the-web-components-api-e0899cbfa4fd */
-.favorite-star-character{
+/* .favorite-star-character{
   color: #ccd6dd;
   cursor: pointer;
   display: inline-block;
@@ -168,7 +168,7 @@ https://medium.com/the-web-tub/tutorial-lets-make-a-favorite-star-button-in-java
 
 .favorite-star-character:hover {
   color: #ffac33;
-}
+} */
 
 /* Fireworks -  */
 
