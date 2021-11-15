@@ -153,7 +153,7 @@ async function fetchMovieDetails(id) {
     overviewDiv.append(movieRelease);
 
     let moviePop = document.createElement("p");
-    moviePop.innerText = `Popularity: ${disneyDetails.movie_results[0].popularity}%`;
+    moviePop.innerText = `Popularity: ${disneyDetails.movie_results[0].popularity}`;
     overviewDiv.append(moviePop);
 
     let movieOverview = document.createElement("p");
@@ -172,7 +172,7 @@ async function fetchShowDetails(id) {
   try {
     let res = await axios.get(BASE_URL1);
     const disneyDetails = res.data;
-    console.log(disneyDetails);
+    //console.log(disneyDetails);
     //Show Details
     let innerShowDiv = document.createElement("div");
     innerShowDiv.classList.add("innerDiv");
@@ -308,16 +308,28 @@ const star3 = document.querySelector("#star3");
 star1.addEventListener("click", () => {
   star1.style.color = "#ffac33";
   let content = document.querySelector(".innerDiv");
-  let movieDiv = document.querySelector("#favorite-movie");
+  // let movieDiv = document.querySelector("link[rel=import][href='../fav-and-watched/index.html']")
+  //   .import.querySelector("#favorite-movies");
+  // let link = document.createElement("link");
+  // link.rel = "import";
+  // link.href = "../fav-and-watched/index.html";
+  // link.setAttribute("async", "");
+  // let contentPgTwo = link.import;
+  // let contentEl = contentPgTwo.querySelector("#favorite-movies");
   console.log(content);
-  console.log(movieDiv);
+  // console.log(movieDiv);
+  // console.log(pgDiv);
 
 })
 
 star2.addEventListener("click", () => {
   star2.style.color = "#ffac33";
+  let content = document.querySelector(".innerDiv");
+  console.log(content);
 })
 
 star3.addEventListener("click", () => {
   star3.style.color = "#ffac33";
+  let content = document.querySelector(".innerDiv");
+  console.log(content);
 })
